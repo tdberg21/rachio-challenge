@@ -4,7 +4,12 @@ export default class Zone extends Component {
   constructor() {
     super();
 
+    this.state = {
+      runtime: ''
+    }
   }
+
+  
 
   render() {
     let { zone } = this.props;
