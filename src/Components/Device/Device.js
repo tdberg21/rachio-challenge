@@ -7,7 +7,7 @@ export default class Device extends Component {
     
     this.state = {
       zones: [],
-      runtime: ''
+      runtime: 0
     };
   }
 
@@ -15,12 +15,12 @@ export default class Device extends Component {
     if (this.state.zones.length) {
       this.setState({
         zones: []
-      })
+      });
     } else {
       let cleanZones = zones.map(zone => this.scrubZones(zone));
       this.setState({
         zones: cleanZones
-    });
+      });
     }
   }
 
@@ -34,7 +34,7 @@ export default class Device extends Component {
       lastWateredDate,
       maxRuntime,
       imageUrl
-    }
+    };
     return zoneInfo;
   }
 
@@ -61,7 +61,7 @@ export default class Device extends Component {
         </button>
         <button>Start All Zones</button>
         <div>
-          <ZoneContainer zones={this.state.zones} />
+          <ZoneContainer zones={this.state.zones} runtime={this.state.runtime}/>
         </div>
       </div>
     );
