@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import ReactDom from 'react-dom';
-import './index.css';
+import ReactDOM from 'react-dom';
+import './App.css';
 
-class App extends Component {
+export default class App extends Component {
   constructor() {
     super();
 
+    this.state = {
+      user: {}
+    }
   }
 
   render() {
@@ -16,8 +19,3 @@ class App extends Component {
     )
   }
 }
-
-ReactDom.render(
-  <App />,
-  document.getElementById('app')
-);
