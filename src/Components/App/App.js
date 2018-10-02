@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import './App.css';
 
 export default class App extends Component {
@@ -9,7 +8,7 @@ export default class App extends Component {
     this.state = {
       user: {}
     }
-  }
+  };
 
   render() {
     return (
@@ -17,5 +16,5 @@ export default class App extends Component {
         App
       </div>
     )
-  }
+  };
 }
