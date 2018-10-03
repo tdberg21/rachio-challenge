@@ -16,6 +16,7 @@ export default class Device extends Component {
       this.setState({
         zones: []
       });
+
     } else {
       let cleanZones = zones.map(zone => this.scrubZones(zone));
       this.setState({
@@ -60,6 +61,7 @@ export default class Device extends Component {
           <input
             type='number'
             id='duration'
+            className='duration-input'
             placeholder='Desired Runtime'
             value={this.state.duration}
             name='duration' 
@@ -68,7 +70,7 @@ export default class Device extends Component {
           <button className='activate-buttons'>Start All Zones</button>
           <button
             onClick={() => this.handleDisplayZones(device.zones)}
-            className='activate-buttons'
+            className='activate-buttons display-zones-button'
             value={device.id} >
             {this.state.zones.length ? 'Hide Zones' : 'Display Zones'}
           </button>
