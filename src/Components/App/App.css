@@ -1,0 +1,11 @@
+
+.app-component {
+  background-color: lightgray;
+  min-height: 100vh;
+}
+
+.app-header {
+  height: 64px;
+  background-color: rgb(0, 167, 225);
+  margin: 0;
+}

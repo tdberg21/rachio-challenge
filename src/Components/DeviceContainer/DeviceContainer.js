@@ -1,11 +1,12 @@
 import React from 'react';
 import Device from '../Device/Device.js';
+import './DeviceContainer.css';
 
 const DeviceContainer = (props) => {
   if (!props.devices) {
     return (
-      <div>
-      Loading
+      <div className='device-container loading-container'>
+        <p className='loading-text'>Loading...</p>
       </div>
     );
   } else {
@@ -13,7 +14,7 @@ const DeviceContainer = (props) => {
       return <Device device={device} key={index}/>;
     });
     return (
-      <div>
+      <div className='device-container'>
         {devices}
       </div>
     );

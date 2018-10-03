@@ -68,19 +68,14 @@ export default class App extends Component {
   }
 
   render() {
-    if (!this.state.user && !this.state.user.devices) {
-      return (
-        <div>
-        App
-        </div>
-      );
-    } else {
-      return (
-        <div>
-          <DeviceContainer devices={this.state.user.devices} />
-        </div>
-      );
-    }
-    
+    return (
+      <div className='app-component'>
+        <header className='app-header'>
+          {this.state.user.name}
+        </header>
+        <DeviceContainer devices={this.state.user.devices} />
+      </div>
+    );
   }
+  
 }
