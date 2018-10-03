@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DeviceContainer tests matches the snapshot with devices 1`] = `
+exports[`DeviceContainer tests should match the snapshot with devices 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DeviceContainer
@@ -155,7 +155,7 @@ ShallowWrapper {
 }
 `;
 
-exports[`DeviceContainer tests matches the snapshot without devices 1`] = `
+exports[`DeviceContainer tests should match the snapshot without devices 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DeviceContainer />,

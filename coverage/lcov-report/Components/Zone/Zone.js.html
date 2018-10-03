@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">90% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/11</span>
+        <span class='fraction'>9/10</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">83.33% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/6</span>
+        <span class='fraction'>5/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">90% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/11</span>
+        <span class='fraction'>9/10</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -97,19 +97,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -119,19 +117,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -144,19 +144,18 @@ import { apiKey } from '../../helpers/apiKey.js';
 import './Zone.css';
 &nbsp;
 export default class Zone extends Component {
-<span class="fstat-no" title="function not covered" >  co</span>nstructor() {
-<span class="cstat-no" title="statement not covered" >    super();</span>
+  constructor() {
+    super();
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.state = {</span>
+    this.state = {
       message: ''
     };
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  ha</span>ndleActivateZone(event) {
-    const id = <span class="cstat-no" title="statement not covered" >event.target.value;</span>
-    const duration = <span class="cstat-no" title="statement not covered" >parseInt(this.props.duration);</span>
-    const url = <span class="cstat-no" title="statement not covered" >'https://api.rach.io/1/public/zone/start';</span>
-<span class="cstat-no" title="statement not covered" >    fetch(url, {</span>
+  handleActivateZone(event) {
+    const id = event.target.value;
+    const duration = parseInt(this.props.duration);
+    fetch('https://api.rach.io/1/public/zone/start', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -167,19 +166,20 @@ export default class Zone extends Component {
         duration
       })
     })
-      .then(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.setState({message: 'Success!'}))</span>
+      .then(() =&gt; this.setState({message: 'Success!'}))
       .catch(<span class="fstat-no" title="function not covered" >er</span>ror =&gt; <span class="cstat-no" title="statement not covered" >this.setState({message: `Error: ${error}`}))</span>;
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  re</span>nder() {
-    let { zone } = <span class="cstat-no" title="statement not covered" >this.props;</span>
-<span class="cstat-no" title="statement not covered" >    return (</span>
+  render() {
+    let { zone } = this.props;
+    return (
       &lt;div&gt;
         &lt;h4&gt;{zone.name}&lt;/h4&gt;
         &lt;img src={zone.imageUrl} alt={zone.name} className='zone-image'/&gt;
         &lt;p&gt;Max Runtime: {zone.maxRuntime} &lt;/p&gt;
         &lt;button 
-          onClick={<span class="fstat-no" title="function not covered" >(e</span>vent) =&gt; <span class="cstat-no" title="statement not covered" >this.handleActivateZone(event)} </span>
+          onClick={(event) =&gt; this.handleActivateZone(event)} 
+          className='activate-zone-button'
           value={zone.id}&gt;
           Activate Zone
         &lt;/button&gt;
@@ -193,7 +193,7 @@ export default class Zone extends Component {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Oct 03 2018 16:07:15 GMT-0600 (MDT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Oct 03 2018 16:38:39 GMT-0600 (MDT)
 </div>
 </div>
 <script src="../../prettify.js"></script>

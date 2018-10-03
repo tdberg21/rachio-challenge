@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1538604435651" clover="3.2.0">
-  <project timestamp="1538604435651" name="All files">
-    <metrics statements="55" coveredstatements="27" conditionals="8" coveredconditionals="8" methods="30" coveredmethods="12" elements="93" coveredelements="47" complexity="0" loc="55" ncloc="55" packages="6" files="6" classes="6">
+<coverage generated="1538606319274" clover="3.2.0">
+  <project timestamp="1538606319274" name="All files">
+    <metrics statements="54" coveredstatements="36" conditionals="8" coveredconditionals="8" methods="30" coveredmethods="17" elements="92" coveredelements="61" complexity="0" loc="54" ncloc="54" packages="6" files="6" classes="6">
       <package name="Components.App">
         <metrics statements="17" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="0"/>
         <file name="App.js" path="/Users/torydberg/Projects/rachio-challenge/src/Components/App/App.js">
@@ -59,20 +59,19 @@
         </file>
       </package>
       <package name="Components.Zone">
-        <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <metrics statements="10" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
         <file name="Zone.js" path="/Users/torydberg/Projects/rachio-challenge/src/Components/Zone/Zone.js">
-          <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
-          <line num="7" count="0" type="stmt"/>
-          <line num="9" count="0" type="stmt"/>
-          <line num="15" count="0" type="stmt"/>
-          <line num="16" count="0" type="stmt"/>
-          <line num="17" count="0" type="stmt"/>
-          <line num="18" count="0" type="stmt"/>
+          <metrics statements="10" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
+          <line num="7" count="4" type="stmt"/>
+          <line num="9" count="4" type="stmt"/>
+          <line num="15" count="2" type="stmt"/>
+          <line num="16" count="2" type="stmt"/>
+          <line num="17" count="2" type="stmt"/>
+          <line num="28" count="2" type="stmt"/>
           <line num="29" count="0" type="stmt"/>
-          <line num="30" count="0" type="stmt"/>
-          <line num="34" count="0" type="stmt"/>
-          <line num="35" count="0" type="stmt"/>
-          <line num="41" count="0" type="stmt"/>
+          <line num="33" count="7" type="stmt"/>
+          <line num="34" count="7" type="stmt"/>
+          <line num="40" count="1" type="stmt"/>
         </file>
       </package>
       <package name="Components.ZoneContainer">

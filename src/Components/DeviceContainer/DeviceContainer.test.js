@@ -6,12 +6,12 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('DeviceContainer tests', () => {
 
-  it('matches the snapshot without devices', () => {
+  it('should match the snapshot without devices', () => {
     const wrapper = shallow(<DeviceContainer />);
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('matches the snapshot with devices', () => {
+  it('should match the snapshot with devices', () => {
     let mockDevices = [{ id: 1 }, { id: 2 }];
     const wrapper = shallow(<DeviceContainer devices={mockDevices} />);
     expect(wrapper).toMatchSnapshot();

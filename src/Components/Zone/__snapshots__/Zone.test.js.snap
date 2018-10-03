@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Zone tests should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Zone
+    duration={60}
+    zone={
+      Object {
+        "enabled": false,
+        "id": "bf329221",
+        "imageUrl": "google.com",
+        "lastWateredDate": 1535642590000,
+        "maxRuntime": 10800,
+        "name": "Zone 2",
+        "zoneNumber": 2,
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h4>
+          Zone 2
+        </h4>,
+        <img
+          alt="Zone 2"
+          className="zone-image"
+          src="google.com"
+        />,
+        <p>
+          Max Runtime: 
+          10800
+           
+        </p>,
+        <button
+          className="activate-zone-button"
+          onClick={[Function]}
+          value="bf329221"
+        >
+          Activate Zone
+        </button>,
+        "",
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Zone 2",
+        },
+        "ref": null,
+        "rendered": "Zone 2",
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "Zone 2",
+          "className": "zone-image",
+          "src": "google.com",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Max Runtime: ",
+            10800,
+            " ",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Max Runtime: ",
+          10800,
+          " ",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Activate Zone",
+          "className": "activate-zone-button",
+          "onClick": [Function],
+          "value": "bf329221",
+        },
+        "ref": null,
+        "rendered": "Activate Zone",
+        "type": "button",
+      },
+      "",
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h4>
+            Zone 2
+          </h4>,
+          <img
+            alt="Zone 2"
+            className="zone-image"
+            src="google.com"
+          />,
+          <p>
+            Max Runtime: 
+            10800
+             
+          </p>,
+          <button
+            className="activate-zone-button"
+            onClick={[Function]}
+            value="bf329221"
+          >
+            Activate Zone
+          </button>,
+          "",
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Zone 2",
+          },
+          "ref": null,
+          "rendered": "Zone 2",
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "Zone 2",
+            "className": "zone-image",
+            "src": "google.com",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Max Runtime: ",
+              10800,
+              " ",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Max Runtime: ",
+            10800,
+            " ",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Activate Zone",
+            "className": "activate-zone-button",
+            "onClick": [Function],
+            "value": "bf329221",
+          },
+          "ref": null,
+          "rendered": "Activate Zone",
+          "type": "button",
+        },
+        "",
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

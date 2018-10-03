@@ -14,8 +14,7 @@ export default class Zone extends Component {
   handleActivateZone(event) {
     const id = event.target.value;
     const duration = parseInt(this.props.duration);
-    const url = 'https://api.rach.io/1/public/zone/start';
-    fetch(url, {
+    fetch('https://api.rach.io/1/public/zone/start', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -39,6 +38,7 @@ export default class Zone extends Component {
         <p>Max Runtime: {zone.maxRuntime} </p>
         <button 
           onClick={(event) => this.handleActivateZone(event)} 
+          className='activate-zone-button'
           value={zone.id}>
           Activate Zone
         </button>
