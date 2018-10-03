@@ -7,7 +7,7 @@ export default class Device extends Component {
     
     this.state = {
       zones: [],
-      runtime: 0
+      duration: 0
     };
   }
 
@@ -39,9 +39,9 @@ export default class Device extends Component {
   }
 
   handleChange(event) {
-    let runtime = event.target.value;
+    let duration = event.target.value;
     this.setState({
-      runtime
+      duration
     });
   }
 
@@ -53,7 +53,7 @@ export default class Device extends Component {
         <p>Model: {device.model}</p>
         <p>Status: {device.status}</p>
         <p>Zones: {device.zones.length}</p>
-        <input type='number' placeholder='Desired Runtime' value={this.state.runtime} name='runtime' onChange={(event) => this.handleChange(event)}></input>
+        <input type='number' placeholder='Desired Runtime' value={this.state.duration} name='duration' onChange={(event) => this.handleChange(event)}></input>
         <button 
           onClick={() => this.handleDisplayZones(device.zones)} 
           value={device.id} >
@@ -61,7 +61,7 @@ export default class Device extends Component {
         </button>
         <button>Start All Zones</button>
         <div>
-          <ZoneContainer zones={this.state.zones} runtime={this.state.runtime}/>
+          <ZoneContainer zones={this.state.zones} duration={this.state.duration}/>
         </div>
       </div>
     );

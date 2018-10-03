@@ -11,22 +11,26 @@ export default class Zone extends Component {
   }
 
   handleActivateZone(event) {
+
     const id = event.target.value;
-    const { runtime } = this.props;
+    console.log(id)
+    const duration = parseInt(this.props.duration);
+    console.log(duration)
+
     const url = 'https://api.rach.io/1/public/zone/start';
-    // fetch(url, {
-    //   method: 'PUT',
-    //   body: {
-    //     id,
-    //     runtime
-    //   },
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //     'Authorization': `Bearer ${apiKey}`
-    //   }
-    // })
-    //   .then(response => response.json())
-    //   .then(results => console.log(results));
+    fetch(url, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`
+      },
+      body: JSON.stringify({
+        id,
+        duration
+      })
+    })
+      .then(response => response.text())
+      .then(results => console.log(results));
   }
 
   render() {
