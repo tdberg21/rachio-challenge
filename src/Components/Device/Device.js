@@ -49,22 +49,28 @@ export default class Device extends Component {
     let { device } = this.props;
     return (
       <div className='device-card'>
-        <h3>{device.name}</h3>
-        <p>Model: {device.model}</p>
-        <p>Status: {device.status}</p>
-        <p>Zones: {device.zones.length}</p>
-        <input 
-          type='number' 
-          placeholder='Desired Runtime' 
-          value={this.state.duration} 
-          name='duration' onChange={(event) => this.handleChange(event)}>
-        </input>
-        <button 
-          onClick={() => this.handleDisplayZones(device.zones)} 
-          value={device.id} >
-          {this.state.zones.length ? 'Hide Zones' : 'Display Zones'}
-        </button>
-        <button>Start All Zones</button>
+        <div className='device-card-text-section'>
+          <h3 className='device-card-text'>{device.name}</h3>
+          <p className='device-card-text'>Model: {device.model}</p>
+          <p className='device-card-text'>Status: {device.status}</p>
+          <p className='device-card-text'>Zones: {device.zones.length}</p>
+        </div>
+        <div className='device-card-input-section'>
+          <label htmlFor='duration' >Runtime Duration:</label>
+          <input
+            type='number'
+            id='duration'
+            placeholder='Desired Runtime'
+            value={this.state.duration}
+            name='duration' onChange={(event) => this.handleChange(event)}>
+          </input>
+          <button>Start All Zones</button>
+          <button
+            onClick={() => this.handleDisplayZones(device.zones)}
+            value={device.id} >
+            {this.state.zones.length ? 'Hide Zones' : 'Display Zones'}
+          </button>
+        </div>
         <div>
           <ZoneContainer zones={this.state.zones} duration={this.state.duration}/>
         </div>
