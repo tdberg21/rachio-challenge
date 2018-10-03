@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1538532017829" clover="3.2.0">
-  <project timestamp="1538532017829" name="All files">
-    <metrics statements="55" coveredstatements="3" conditionals="8" coveredconditionals="0" methods="30" coveredmethods="0" elements="93" coveredelements="3" complexity="0" loc="55" ncloc="55" packages="6" files="6" classes="6">
+<coverage generated="1538532783439" clover="3.2.0">
+  <project timestamp="1538532783439" name="All files">
+    <metrics statements="55" coveredstatements="7" conditionals="8" coveredconditionals="2" methods="30" coveredmethods="2" elements="93" coveredelements="11" complexity="0" loc="55" ncloc="55" packages="6" files="6" classes="6">
       <package name="Components.App">
         <metrics statements="17" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="0"/>
         <file name="App.js" path="/Users/torydberg/Projects/rachio-challenge/src/Components/App/App.js">
@@ -76,14 +76,14 @@
         </file>
       </package>
       <package name="Components.ZoneContainer">
-        <metrics statements="5" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <file name="ZoneContainer.js" path="/Users/torydberg/Projects/rachio-challenge/src/Components/ZoneContainer/ZoneContainer.js">
-          <metrics statements="5" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
           <line num="4" count="4" type="stmt"/>
-          <line num="6" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="7" count="0" type="stmt"/>
-          <line num="8" count="0" type="stmt"/>
-          <line num="11" count="0" type="stmt"/>
+          <line num="6" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
         </file>
       </package>
       <package name="helpers">
