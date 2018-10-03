@@ -6,17 +6,13 @@ export default class Zone extends Component {
     super();
 
     this.state = {
-      runtime: ''
+      message: ''
     };
   }
 
   handleActivateZone(event) {
-
     const id = event.target.value;
-    console.log(id)
     const duration = parseInt(this.props.duration);
-    console.log(duration)
-
     const url = 'https://api.rach.io/1/public/zone/start';
     fetch(url, {
       method: 'PUT',
@@ -29,8 +25,8 @@ export default class Zone extends Component {
         duration
       })
     })
-      .then(response => response.text())
-      .then(results => console.log(results));
+      .then(() => this.setState({message: 'Success!'}))
+      .catch(error => this.setState({message: `Error: ${error}`}));
   }
 
   render() {
@@ -45,6 +41,7 @@ export default class Zone extends Component {
           value={zone.id}>
           Activate Zone
         </button>
+        {this.state.message}
       </div>
     );
   }
