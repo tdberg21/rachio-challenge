@@ -56,17 +56,19 @@ export default class Device extends Component {
           <p className='device-card-text'>Zones: {device.zones.length}</p>
         </div>
         <div className='device-card-input-section'>
-          <label htmlFor='duration' >Runtime Duration:</label>
+          <label htmlFor='duration'>Runtime Duration:</label>
           <input
             type='number'
             id='duration'
             placeholder='Desired Runtime'
             value={this.state.duration}
-            name='duration' onChange={(event) => this.handleChange(event)}>
+            name='duration' 
+            onChange={(event) => this.handleChange(event)}>
           </input>
-          <button>Start All Zones</button>
+          <button className='activate-buttons'>Start All Zones</button>
           <button
             onClick={() => this.handleDisplayZones(device.zones)}
+            className='activate-buttons'
             value={device.id} >
             {this.state.zones.length ? 'Hide Zones' : 'Display Zones'}
           </button>

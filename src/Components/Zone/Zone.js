@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { apiKey } from '../../helpers/apiKey.js';
+import './Zone.css';
 
 export default class Zone extends Component {
   constructor() {
@@ -34,7 +35,7 @@ export default class Zone extends Component {
     return (
       <div>
         <h4>{zone.name}</h4>
-        <img src={zone.imageUrl} alt={zone.name}/>
+        <img src={zone.imageUrl} alt={zone.name} className='zone-image'/>
         <p>Max Runtime: {zone.maxRuntime} </p>
         <button 
           onClick={(event) => this.handleActivateZone(event)} 
