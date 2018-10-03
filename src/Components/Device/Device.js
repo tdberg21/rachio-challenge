@@ -53,7 +53,12 @@ export default class Device extends Component {
         <p>Model: {device.model}</p>
         <p>Status: {device.status}</p>
         <p>Zones: {device.zones.length}</p>
-        <input type='number' placeholder='Desired Runtime' value={this.state.duration} name='duration' onChange={(event) => this.handleChange(event)}></input>
+        <input 
+          type='number' 
+          placeholder='Desired Runtime' 
+          value={this.state.duration} 
+          name='duration' onChange={(event) => this.handleChange(event)}>
+        </input>
         <button 
           onClick={() => this.handleDisplayZones(device.zones)} 
           value={device.id} >
