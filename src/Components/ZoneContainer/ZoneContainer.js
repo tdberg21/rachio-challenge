@@ -1,5 +1,6 @@
 import React from 'react';
 import Zone from '../Zone/Zone.js';
+import PropTypes from 'prop-types';
 
 const ZoneContainer = ({ zones, duration }) => {
   let zonesToDisplay;
@@ -16,3 +17,8 @@ const ZoneContainer = ({ zones, duration }) => {
 };
 
 export default ZoneContainer;
+
+ZoneContainer.propTypes = {
+  zones: PropTypes.array,
+  duration: PropTypes.number
+};

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { apiKey } from '../../helpers/apiKey.js';
 import './Zone.css';
+import PropTypes from 'prop-types';
 
 export default class Zone extends Component {
   constructor() {
@@ -47,3 +48,8 @@ export default class Zone extends Component {
     );
   }
 }
+
+Zone.propTypes = {
+  zone: PropTypes.obj,
+  duration: PropTypes.number
+};
