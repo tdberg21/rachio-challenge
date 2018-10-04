@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ZoneContainer from '../ZoneContainer/ZoneContainer.js';
+import { apiKey } from '../../helpers/apiKey.js';
 
 export default class Device extends Component {
   constructor() {
@@ -9,6 +10,21 @@ export default class Device extends Component {
       zones: [],
       duration: 0
     };
+    this.scrubZones = this.scrubZones.bind(this);
+    this.handleDisplayZones = this.handleDisplayZones.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.activateAllZones = this.activateAllZones.bind(this);
+    this.activateZone = this.activateZone.bind(this);
+  }
+
+  scrubZones(zone) {
+    let {
+      id, name, zoneNumber, enabled, lastWateredDate, maxRuntime, imageUrl
+    } = zone;
+    let zoneInfo = {
+      id, name, zoneNumber, enabled, lastWateredDate, maxRuntime, imageUrl
+    };
+    return zoneInfo;
   }
 
   handleDisplayZones(zones) {
@@ -25,25 +41,32 @@ export default class Device extends Component {
     }
   }
 
-  scrubZones(zone) {
-    let { id, name, zoneNumber, enabled, lastWateredDate, maxRuntime, imageUrl } = zone;
-    let zoneInfo = {
-      id,
-      name,
-      zoneNumber,
-      enabled,
-      lastWateredDate,
-      maxRuntime,
-      imageUrl
-    };
-    return zoneInfo;
-  }
-
   handleChange(event) {
     let duration = event.target.value;
     this.setState({
       duration
     });
+  }
+
+  activateAllZones(zones) {
+    zones.forEach(zone => this.activateZone(zone.id));
+  }
+
+  activateZone(id) {
+    const duration = parseInt(this.state.duration);
+    fetch('https://api.rach.io/1/public/zone/start', {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`
+      },
+      body: JSON.stringify({
+        id,
+        duration
+      })
+    })
+      .then((response) => console.log(response))
+      .catch(error => this.setState({ message: `Error: ${error}` }));
   }
 
   render() {
@@ -67,7 +90,11 @@ export default class Device extends Component {
             name='duration' 
             onChange={(event) => this.handleChange(event)}>
           </input>
-          <button className='activate-buttons'>Start All Zones</button>
+          <button 
+            className='activate-buttons'
+            onClick={() => this.activateAllZones(device.zones)}>
+            Start All Zones
+          </button>
           <button
             onClick={() => this.handleDisplayZones(device.zones)}
             className='activate-buttons display-zones-button'
@@ -76,7 +103,10 @@ export default class Device extends Component {
           </button>
         </div>
         <div>
-          <ZoneContainer zones={this.state.zones} duration={this.state.duration}/>
+          <ZoneContainer 
+            zones={this.state.zones} 
+            duration={this.state.duration} 
+          />
         </div>
       </div>
     );
