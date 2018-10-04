@@ -19,7 +19,7 @@ describe('Device tests', () => {
     wrapper = shallow(<Device device={mockDevice}/>);
   });
 
-  it('matches the snapshot', () => {
+  it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -59,13 +59,13 @@ describe('Device tests', () => {
     expect(results).toEqual(2);
   });
 
-  it('updates state when handleChange is called', () => {
+  it('should update state when handleChange is called', () => {
     const mockEvent = { target: { name: 'duration', value: 60 } };
     wrapper.instance().handleChange(mockEvent);
     expect(wrapper.state('duration')).toBe(60);
   });
 
-  it('calls handleChange when runtime duration is changed', () => {
+  it('should invoke handleChange when runtime duration is changed', () => {
     wrapper = shallow(<Device device={mockDevice} />);
     const spy = spyOn(wrapper.instance(), 'handleChange');
     wrapper.instance().forceUpdate();
@@ -76,7 +76,7 @@ describe('Device tests', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  it('calls handleDisplayZones on click of the display zones button', () => {
+  it('should invoke handleDisplayZones on click of the display zones button', () => {
     const mockZones = [{ id: 1 }, { id: 2 }];
     wrapper = shallow(<Device device={mockDevice} />);
     wrapper.setState({ zones: mockZones });

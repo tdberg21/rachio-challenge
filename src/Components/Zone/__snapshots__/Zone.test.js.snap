@@ -4,7 +4,6 @@ exports[`Zone tests should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Zone
-    duration={60}
     zone={
       Object {
         "enabled": false,
@@ -44,6 +43,20 @@ ShallowWrapper {
           10800
            
         </p>,
+        <label
+          htmlFor="duration"
+        >
+          Runtime Duration:
+        </label>,
+        <input
+          className="duration-input"
+          id="duration"
+          name="duration"
+          onChange={[Function]}
+          placeholder="Desired Runtime"
+          type="number"
+          value={0}
+        />,
         <button
           className="activate-zone-button"
           onClick={[Function]}
@@ -104,6 +117,35 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "children": "Runtime Duration:",
+          "htmlFor": "duration",
+        },
+        "ref": null,
+        "rendered": "Runtime Duration:",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "duration-input",
+          "id": "duration",
+          "name": "duration",
+          "onChange": [Function],
+          "placeholder": "Desired Runtime",
+          "type": "number",
+          "value": 0,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
           "children": "Activate Zone",
           "className": "activate-zone-button",
           "onClick": [Function],
@@ -137,6 +179,20 @@ ShallowWrapper {
             10800
              
           </p>,
+          <label
+            htmlFor="duration"
+          >
+            Runtime Duration:
+          </label>,
+          <input
+            className="duration-input"
+            id="duration"
+            name="duration"
+            onChange={[Function]}
+            placeholder="Desired Runtime"
+            type="number"
+            value={0}
+          />,
           <button
             className="activate-zone-button"
             onClick={[Function]}
@@ -191,6 +247,35 @@ ShallowWrapper {
             " ",
           ],
           "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Runtime Duration:",
+            "htmlFor": "duration",
+          },
+          "ref": null,
+          "rendered": "Runtime Duration:",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "duration-input",
+            "id": "duration",
+            "name": "duration",
+            "onChange": [Function],
+            "placeholder": "Desired Runtime",
+            "type": "number",
+            "value": 0,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
         },
         Object {
           "instance": null,

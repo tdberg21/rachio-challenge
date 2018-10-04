@@ -121,5 +121,5 @@ export default class Device extends Component {
 }
 
 Device.propTypes = {
-  device: PropTypes.obj
+  // device: PropTypes.obj
 };

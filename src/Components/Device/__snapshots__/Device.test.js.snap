@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Device tests matches the snapshot 1`] = `
+exports[`Device tests should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Device
@@ -65,7 +65,14 @@ ShallowWrapper {
         <div
           className="device-card-input-section"
         >
+          <button
+            className="activate-buttons"
+            onClick={[Function]}
+          >
+            Start All Zones
+          </button>
           <label
+            className="duration-label"
             htmlFor="duration"
           >
             Runtime Duration:
@@ -80,11 +87,6 @@ ShallowWrapper {
             value={0}
           />
           <button
-            className="activate-buttons"
-          >
-            Start All Zones
-          </button>
-          <button
             className="activate-buttons display-zones-button"
             onClick={[Function]}
             value="d8f8ac47"
@@ -94,7 +96,6 @@ ShallowWrapper {
         </div>,
         <div>
           <ZoneContainer
-            duration={0}
             zones={Array []}
           />
         </div>,
@@ -211,7 +212,14 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
+            <button
+              className="activate-buttons"
+              onClick={[Function]}
+            >
+              Start All Zones
+            </button>,
             <label
+              className="duration-label"
               htmlFor="duration"
             >
               Runtime Duration:
@@ -225,11 +233,6 @@ ShallowWrapper {
               type="number"
               value={0}
             />,
-            <button
-              className="activate-buttons"
-            >
-              Start All Zones
-            </button>,
             <button
               className="activate-buttons display-zones-button"
               onClick={[Function]}
@@ -247,7 +250,21 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "children": "Start All Zones",
+              "className": "activate-buttons",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Start All Zones",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
               "children": "Runtime Duration:",
+              "className": "duration-label",
               "htmlFor": "duration",
             },
             "ref": null,
@@ -276,18 +293,6 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Start All Zones",
-              "className": "activate-buttons",
-            },
-            "ref": null,
-            "rendered": "Start All Zones",
-            "type": "button",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
               "children": "Display Zones",
               "className": "activate-buttons display-zones-button",
               "onClick": [Function],
@@ -306,7 +311,6 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <ZoneContainer
-            duration={0}
             zones={Array []}
           />,
         },
@@ -316,7 +320,6 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "duration": 0,
             "zones": Array [],
           },
           "ref": null,
@@ -364,7 +367,14 @@ ShallowWrapper {
           <div
             className="device-card-input-section"
           >
+            <button
+              className="activate-buttons"
+              onClick={[Function]}
+            >
+              Start All Zones
+            </button>
             <label
+              className="duration-label"
               htmlFor="duration"
             >
               Runtime Duration:
@@ -379,11 +389,6 @@ ShallowWrapper {
               value={0}
             />
             <button
-              className="activate-buttons"
-            >
-              Start All Zones
-            </button>
-            <button
               className="activate-buttons display-zones-button"
               onClick={[Function]}
               value="d8f8ac47"
@@ -393,7 +398,6 @@ ShallowWrapper {
           </div>,
           <div>
             <ZoneContainer
-              duration={0}
               zones={Array []}
             />
           </div>,
@@ -510,7 +514,14 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
+              <button
+                className="activate-buttons"
+                onClick={[Function]}
+              >
+                Start All Zones
+              </button>,
               <label
+                className="duration-label"
                 htmlFor="duration"
               >
                 Runtime Duration:
@@ -524,11 +535,6 @@ ShallowWrapper {
                 type="number"
                 value={0}
               />,
-              <button
-                className="activate-buttons"
-              >
-                Start All Zones
-              </button>,
               <button
                 className="activate-buttons display-zones-button"
                 onClick={[Function]}
@@ -546,7 +552,21 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
+                "children": "Start All Zones",
+                "className": "activate-buttons",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Start All Zones",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
                 "children": "Runtime Duration:",
+                "className": "duration-label",
                 "htmlFor": "duration",
               },
               "ref": null,
@@ -575,18 +595,6 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Start All Zones",
-                "className": "activate-buttons",
-              },
-              "ref": null,
-              "rendered": "Start All Zones",
-              "type": "button",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
                 "children": "Display Zones",
                 "className": "activate-buttons display-zones-button",
                 "onClick": [Function],
@@ -605,7 +613,6 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <ZoneContainer
-              duration={0}
               zones={Array []}
             />,
           },
@@ -615,7 +622,6 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "duration": 0,
               "zones": Array [],
             },
             "ref": null,

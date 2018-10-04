@@ -19,5 +19,5 @@ const ZoneContainer = ({ zones }) => {
 export default ZoneContainer;
 
 ZoneContainer.propTypes = {
-  zones: PropTypes.array
+  // zones: PropTypes.array
 };

@@ -14,20 +14,12 @@ export default class Zone extends Component {
 
     this.handleActivateZone = this.handleActivateZone.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.clearInput = this.clearInput.bind(this);
   }
 
   handleChange(event) {
     let duration = event.target.value;
     this.setState({
       duration
-    });
-    this.clearInput();
-  }
-
-  clearInput() {
-    this.setState({
-      duration: 0
     });
   }
 
@@ -79,6 +71,6 @@ export default class Zone extends Component {
 }
 
 Zone.propTypes = {
-  zone: PropTypes.obj,
+  // zone: PropTypes.obj,
   duration: PropTypes.number
 };

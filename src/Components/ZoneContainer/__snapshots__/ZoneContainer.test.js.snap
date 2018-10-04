@@ -112,7 +112,6 @@ ShallowWrapper {
         "key": "0",
         "nodeType": "class",
         "props": Object {
-          "duration": undefined,
           "zone": Object {
             "id": 1,
           },
@@ -126,7 +125,6 @@ ShallowWrapper {
         "key": "1",
         "nodeType": "class",
         "props": Object {
-          "duration": undefined,
           "zone": Object {
             "id": 2,
           },
@@ -168,7 +166,6 @@ ShallowWrapper {
           "key": "0",
           "nodeType": "class",
           "props": Object {
-            "duration": undefined,
             "zone": Object {
               "id": 1,
             },
@@ -182,7 +179,6 @@ ShallowWrapper {
           "key": "1",
           "nodeType": "class",
           "props": Object {
-            "duration": undefined,
             "zone": Object {
               "id": 2,
             },

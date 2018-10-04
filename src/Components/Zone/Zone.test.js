@@ -17,11 +17,27 @@ describe('Zone tests', () => {
   };
 
   beforeEach(() => {
-    wrapper = shallow(<Zone zone={mockZone} duration={60} />);
+    wrapper = shallow(<Zone zone={mockZone} />);
   });
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should update state when handleChange is called', () => {
+    const mockEvent = { target: { value: 60 } };
+    wrapper.instance().handleChange(mockEvent);
+    expect(wrapper.state('duration')).toBe(60);
+  });
+
+  it('should invoke handleChange when runtime duration is changed', () => {
+    const spy = spyOn(wrapper.instance(), 'handleChange');
+    wrapper.instance().forceUpdate();
+    const mockEvent = { target: { value: 'something' } };
+
+    wrapper.find('.duration-input').simulate('change', mockEvent);
+
+    expect(spy).toHaveBeenCalled();
   });
 
   it('should make a fetch request when handleActivateZone is called', () => {
