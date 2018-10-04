@@ -25,7 +25,6 @@ describe('Device tests', () => {
 
   it('should clear the zones array in state when handleDisplayZones is called and there are zones in state', () => {
     const mockZones = [{ id: 1}, { id: 2}];
-    wrapper = shallow(<Device device={mockDevice} />);
     wrapper.setState({zones: mockZones});
     wrapper.instance().handleDisplayZones();
     const results = wrapper.state('zones');
@@ -51,7 +50,6 @@ describe('Device tests', () => {
       maxRuntime: 10800,
       imageUrl: 'google.com'
     }];
-    wrapper = shallow(<Device device={mockDevice} />);
     wrapper.setState({ zones: [] });
     wrapper.instance().handleDisplayZones(mockZones);
     const results = wrapper.state('zones').length;
@@ -66,7 +64,6 @@ describe('Device tests', () => {
   });
 
   it('should invoke handleChange when runtime duration is changed', () => {
-    wrapper = shallow(<Device device={mockDevice} />);
     const spy = spyOn(wrapper.instance(), 'handleChange');
     wrapper.instance().forceUpdate();
     const mockEvent = { target: { value: 'something' } };
@@ -76,9 +73,45 @@ describe('Device tests', () => {
     expect(spy).toHaveBeenCalled();
   });
 
+  it('should invoke activateZone once for each zone when activateAllZones is invoked', () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      json: () => Promise.resolve({})
+    }));
+    const mockZones = [{id: 1}, {id: 2}];
+    const spy = spyOn(wrapper.instance(), 'activateZone');
+    wrapper.instance().forceUpdate();
+    wrapper.instance().activateAllZones(mockZones);
+
+    expect(spy).toHaveBeenCalledTimes(2);
+  });
+
+  it('should add a status code to the status array in state when activateZone is invoked', () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      status: 204
+    }));
+    const initialState = wrapper.state('status').length;
+    wrapper.instance().activateZone(3);
+    const results = wrapper.state();
+
+    expect(initialState).toEqual(0);
+  });
+
+  it('should invoke activateAllZones on click of the Start All Zones button', () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      json: () => Promise.resolve({})
+    }));
+    const mockZones = [{ id: 1 }, { id: 2 }];
+    wrapper.setState({ zones: mockZones });
+    const spy = spyOn(wrapper.instance(), 'activateAllZones');
+    wrapper.instance().forceUpdate();
+
+    wrapper.find('.activate-all-button').simulate('click', mockZones);
+
+    expect(spy).toHaveBeenCalled();
+  });
+
   it('should invoke handleDisplayZones on click of the display zones button', () => {
     const mockZones = [{ id: 1 }, { id: 2 }];
-    wrapper = shallow(<Device device={mockDevice} />);
     wrapper.setState({ zones: mockZones });
     const spy = spyOn(wrapper.instance(), 'handleDisplayZones');
     wrapper.instance().forceUpdate();

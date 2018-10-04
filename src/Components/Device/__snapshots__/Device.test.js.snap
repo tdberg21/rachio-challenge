@@ -66,7 +66,7 @@ ShallowWrapper {
           className="device-card-input-section"
         >
           <button
-            className="activate-buttons"
+            className="activate-buttons activate-all-button"
             onClick={[Function]}
           >
             Start All Zones
@@ -213,7 +213,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <button
-              className="activate-buttons"
+              className="activate-buttons activate-all-button"
               onClick={[Function]}
             >
               Start All Zones
@@ -251,7 +251,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Start All Zones",
-              "className": "activate-buttons",
+              "className": "activate-buttons activate-all-button",
               "onClick": [Function],
             },
             "ref": null,
@@ -368,7 +368,7 @@ ShallowWrapper {
             className="device-card-input-section"
           >
             <button
-              className="activate-buttons"
+              className="activate-buttons activate-all-button"
               onClick={[Function]}
             >
               Start All Zones
@@ -515,7 +515,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <button
-                className="activate-buttons"
+                className="activate-buttons activate-all-button"
                 onClick={[Function]}
               >
                 Start All Zones
@@ -553,7 +553,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Start All Zones",
-                "className": "activate-buttons",
+                "className": "activate-buttons activate-all-button",
                 "onClick": [Function],
               },
               "ref": null,

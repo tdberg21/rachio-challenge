@@ -85,7 +85,7 @@ export default class Device extends Component {
         </div>
         <div className='device-card-input-section'>
           <button 
-            className='activate-buttons'
+            className='activate-buttons activate-all-button'
             onClick={() => this.activateAllZones(device.zones)}>
             Start All Zones
           </button>
