@@ -11,6 +11,11 @@ export default class App extends Component {
       userId: '',
       user: {}
     };
+    this.fetchUserId = this.fetchUserId.bind(this);
+    this.fetchUserInfo = this.fetchUserInfo.bind(this);
+    this.scrubUserInfo = this.scrubUserInfo.bind(this);
+    this.scrubDeviceInfo = this.scrubDeviceInfo.bind(this);
+
   }
 
   componentDidMount() {
@@ -76,6 +81,5 @@ export default class App extends Component {
         <DeviceContainer devices={this.state.user.devices} />
       </div>
     );
-  }
-  
+  } 
 }
