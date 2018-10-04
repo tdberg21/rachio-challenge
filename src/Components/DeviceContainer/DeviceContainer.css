@@ -31,6 +31,19 @@
   bottom: 130px;
 }
 
+.duration-input {
+  width: 100px;
+  margin: 5px auto;
+}
+
+.duration-label {
+  margin: 5px auto;
+}
+
 .activate-buttons {
-  margin: 10px;
+  border-radius: 2px;
+  margin: 10px auto;
+  width: 150px;
+  height: 1.5em;
+  font-size: 0.8em;
 }

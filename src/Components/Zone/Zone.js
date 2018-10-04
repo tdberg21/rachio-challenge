@@ -1,21 +1,40 @@
 import React, { Component } from 'react';
 import { apiKey } from '../../helpers/apiKey.js';
 import './Zone.css';
+import PropTypes from 'prop-types';
 
 export default class Zone extends Component {
   constructor() {
     super();
 
     this.state = {
-      message: ''
+      message: '',
+      duration: 0
     };
+
+    this.handleActivateZone = this.handleActivateZone.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.clearInput = this.clearInput.bind(this);
+  }
+
+  handleChange(event) {
+    let duration = event.target.value;
+    this.setState({
+      duration
+    });
+    this.clearInput();
+  }
+
+  clearInput() {
+    this.setState({
+      duration: 0
+    });
   }
 
   handleActivateZone(event) {
     const id = event.target.value;
-    const duration = parseInt(this.props.duration);
-    const url = 'https://api.rach.io/1/public/zone/start';
-    fetch(url, {
+    const duration = parseInt(this.state.duration);
+    fetch('https://api.rach.io/1/public/zone/start', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -37,8 +56,19 @@ export default class Zone extends Component {
         <h4>{zone.name}</h4>
         <img src={zone.imageUrl} alt={zone.name} className='zone-image'/>
         <p>Max Runtime: {zone.maxRuntime} </p>
+        <label htmlFor='duration'>Runtime Duration:</label>
+        <input
+          type='number'
+          id='duration'
+          className='duration-input'
+          placeholder='Desired Runtime'
+          value={this.state.duration}
+          name='duration'
+          onChange={(event) => this.handleChange(event)}>
+        </input>
         <button 
           onClick={(event) => this.handleActivateZone(event)} 
+          className='activate-zone-button'
           value={zone.id}>
           Activate Zone
         </button>
@@ -47,3 +77,8 @@ export default class Zone extends Component {
     );
   }
 }
+
+Zone.propTypes = {
+  zone: PropTypes.obj,
+  duration: PropTypes.number
+};
