@@ -10,7 +10,7 @@ export default class Device extends Component {
     this.state = {
       zones: [],
       duration: 0,
-      status: 0
+      status: []
     };
     this.scrubZones = this.scrubZones.bind(this);
     this.handleDisplayZones = this.handleDisplayZones.bind(this);
@@ -67,7 +67,9 @@ export default class Device extends Component {
         duration
       })
     })
-      .then((response) => this.setState({status: response.status}))
+      .then((response) => this.setState({
+        status: [...this.state.status, response.status]
+      }))
       .catch(error => this.setState({ message: `Error: ${error}` }));
   }
 
@@ -82,21 +84,25 @@ export default class Device extends Component {
           <p className='device-card-text'>Zones: {device.zones.length}</p>
         </div>
         <div className='device-card-input-section'>
-          <label htmlFor='duration'>Runtime Duration:</label>
+          <button 
+            className='activate-buttons'
+            onClick={() => this.activateAllZones(device.zones)}>
+            Start All Zones
+          </button>
+          <label
+            htmlFor='duration'
+            className='duration-label'>
+            Runtime Duration:
+          </label>
           <input
             type='number'
             id='duration'
             className='duration-input'
             placeholder='Desired Runtime'
             value={this.state.duration}
-            name='duration' 
+            name='duration'
             onChange={(event) => this.handleChange(event)}>
           </input>
-          <button 
-            className='activate-buttons'
-            onClick={() => this.activateAllZones(device.zones)}>
-            Start All Zones
-          </button>
           <button
             onClick={() => this.handleDisplayZones(device.zones)}
             className='activate-buttons display-zones-button'
@@ -107,7 +113,6 @@ export default class Device extends Component {
         <div>
           <ZoneContainer 
             zones={this.state.zones} 
-            duration={this.state.duration} 
           />
         </div>
       </div>
