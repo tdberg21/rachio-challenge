@@ -1,3 +1,24 @@
 .zone-image {
   height: 150px;
 }
+
+.zone-component {
+  margin-top: 10px;
+  border-top: 2px solid #767679;
+  display: flex;
+}
+
+.zone-sections {
+  width: 50%;
+  padding-bottom: 15px;
+}
+
+.zone-info-section {
+  padding-left: 25px;
+}
+
+.zone-form-section {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}

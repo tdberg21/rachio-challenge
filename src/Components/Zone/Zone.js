@@ -14,20 +14,12 @@ export default class Zone extends Component {
 
     this.handleActivateZone = this.handleActivateZone.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.clearInput = this.clearInput.bind(this);
   }
 
   handleChange(event) {
     let duration = event.target.value;
     this.setState({
       duration
-    });
-    this.clearInput();
-  }
-
-  clearInput() {
-    this.setState({
-      duration: 0
     });
   }
 
@@ -46,39 +38,45 @@ export default class Zone extends Component {
       })
     })
       .then(() => this.setState({message: 'Success!'}))
-      .catch(error => this.setState({message: `Error: ${error}`}));
+      .catch(error => this.setState({message: `Error!`}));
   }
 
   render() {
     let { zone } = this.props;
     return (
-      <div>
-        <h4>{zone.name}</h4>
-        <img src={zone.imageUrl} alt={zone.name} className='zone-image'/>
-        <p>Max Runtime: {zone.maxRuntime} </p>
-        <label htmlFor='duration'>Runtime Duration:</label>
-        <input
-          type='number'
-          id='duration'
-          className='duration-input'
-          placeholder='Desired Runtime'
-          value={this.state.duration}
-          name='duration'
-          onChange={(event) => this.handleChange(event)}>
-        </input>
-        <button 
-          onClick={(event) => this.handleActivateZone(event)} 
-          className='activate-zone-button'
-          value={zone.id}>
-          Activate Zone
-        </button>
-        {this.state.message}
+      <div className='zone-component'>
+        <section className='zone-info-section zone-sections'>
+          <h4>{zone.name}</h4>
+          <p>Max Runtime: {zone.maxRuntime} </p>
+          <img src={zone.imageUrl} alt={zone.name} className='zone-image' />
+        </section>
+        <section className='zone-form-section zone-sections'>
+          <label 
+            htmlFor='duration'
+            className='duration-label'>
+            Runtime Duration:
+          </label>
+          <input
+            type='number'
+            id='duration'
+            className='duration-input'
+            placeholder='Desired Runtime'
+            value={this.state.duration}
+            name='duration'
+            onChange={(event) => this.handleChange(event)}>
+          </input>
+          <button
+            onClick={(event) => this.handleActivateZone(event)}
+            className='activate-zone-button activate-buttons buttons'
+            value={zone.id}>
+            Activate Zone
+          </button>
+        </section>
       </div>
     );
   }
 }
 
 Zone.propTypes = {
-  zone: PropTypes.obj,
   duration: PropTypes.number
 };

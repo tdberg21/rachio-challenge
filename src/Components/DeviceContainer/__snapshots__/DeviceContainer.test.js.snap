@@ -44,7 +44,7 @@ ShallowWrapper {
           }
         />,
       ],
-      "className": "device-container",
+      "className": "device-container-component",
     },
     "ref": null,
     "rendered": Array [
@@ -99,7 +99,7 @@ ShallowWrapper {
             }
           />,
         ],
-        "className": "device-container",
+        "className": "device-container-component",
       },
       "ref": null,
       "rendered": Array [
@@ -177,7 +177,7 @@ ShallowWrapper {
       >
         Loading...
       </p>,
-      "className": "device-container loading-container",
+      "className": "device-container-component loading-container",
     },
     "ref": null,
     "rendered": Object {
@@ -205,7 +205,7 @@ ShallowWrapper {
         >
           Loading...
         </p>,
-        "className": "device-container loading-container",
+        "className": "device-container-component loading-container",
       },
       "ref": null,
       "rendered": Object {
