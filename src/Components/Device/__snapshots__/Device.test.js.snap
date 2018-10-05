@@ -37,62 +37,66 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="device-card-text-section"
+          className="device-card"
         >
-          <h3
-            className="device-card-text"
+          <section
+            className="device-card-text-section"
           >
-            Gouda
-          </h3>
-          <p
-            className="device-card-text"
+            <h3
+              className="device-card-text"
+            >
+              Gouda
+            </h3>
+            <p
+              className="device-card-text"
+            >
+              Model: 
+              GENERATION2_8ZONE
+            </p>
+            <p
+              className="device-card-text"
+            >
+              Status: 
+            </p>
+            <p
+              className="device-card-text"
+            >
+              Zones: 
+              2
+            </p>
+            <button
+              className="buttons display-zones-button"
+              onClick={[Function]}
+              value="d8f8ac47"
+            >
+              Display Zones
+            </button>
+          </section>
+          <section
+            className="device-card-input-section"
           >
-            Model: 
-            GENERATION2_8ZONE
-          </p>
-          <p
-            className="device-card-text"
-          >
-            Status: 
-          </p>
-          <p
-            className="device-card-text"
-          >
-            Zones: 
-            2
-          </p>
-        </div>,
-        <div
-          className="device-card-input-section"
-        >
-          <button
-            className="activate-buttons activate-all-button"
-            onClick={[Function]}
-          >
-            Start All Zones
-          </button>
-          <label
-            className="duration-label"
-            htmlFor="duration"
-          >
-            Runtime Duration:
-          </label>
-          <input
-            className="duration-input"
-            id="duration"
-            name="duration"
-            onChange={[Function]}
-            placeholder="Desired Runtime"
-            type="number"
-            value={0}
-          />
-          <button
-            className="activate-buttons display-zones-button"
-            onClick={[Function]}
-            value="d8f8ac47"
-          >
-            Display Zones
-          </button>
+            <label
+              className="duration-label"
+              htmlFor="duration"
+            >
+              Runtime Duration:
+            </label>
+            <input
+              className="duration-input"
+              id="duration"
+              name="duration"
+              onChange={[Function]}
+              placeholder="Desired Runtime"
+              type="number"
+              value={0}
+            />
+            <button
+              className="activate-buttons activate-all-button buttons"
+              onClick={[Function]}
+            >
+              Start All Zones
+            </button>
+          </section>
         </div>,
         <div>
           <ZoneContainer
@@ -100,7 +104,7 @@ ShallowWrapper {
           />
         </div>,
       ],
-      "className": "device-card",
+      "className": "device-card-container",
     },
     "ref": null,
     "rendered": Array [
@@ -110,30 +114,66 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <h3
-              className="device-card-text"
+            <section
+              className="device-card-text-section"
             >
-              Gouda
-            </h3>,
-            <p
-              className="device-card-text"
+              <h3
+                className="device-card-text"
+              >
+                Gouda
+              </h3>
+              <p
+                className="device-card-text"
+              >
+                Model: 
+                GENERATION2_8ZONE
+              </p>
+              <p
+                className="device-card-text"
+              >
+                Status: 
+              </p>
+              <p
+                className="device-card-text"
+              >
+                Zones: 
+                2
+              </p>
+              <button
+                className="buttons display-zones-button"
+                onClick={[Function]}
+                value="d8f8ac47"
+              >
+                Display Zones
+              </button>
+            </section>,
+            <section
+              className="device-card-input-section"
             >
-              Model: 
-              GENERATION2_8ZONE
-            </p>,
-            <p
-              className="device-card-text"
-            >
-              Status: 
-            </p>,
-            <p
-              className="device-card-text"
-            >
-              Zones: 
-              2
-            </p>,
+              <label
+                className="duration-label"
+                htmlFor="duration"
+              >
+                Runtime Duration:
+              </label>
+              <input
+                className="duration-input"
+                id="duration"
+                name="duration"
+                onChange={[Function]}
+                placeholder="Desired Runtime"
+                type="number"
+                value={0}
+              />
+              <button
+                className="activate-buttons activate-all-button buttons"
+                onClick={[Function]}
+              >
+                Start All Zones
+              </button>
+            </section>,
           ],
-          "className": "device-card-text-section",
+          "className": "device-card",
         },
         "ref": null,
         "rendered": Array [
@@ -142,12 +182,123 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Gouda",
-              "className": "device-card-text",
+              "children": Array [
+                <h3
+                  className="device-card-text"
+                >
+                  Gouda
+                </h3>,
+                <p
+                  className="device-card-text"
+                >
+                  Model: 
+                  GENERATION2_8ZONE
+                </p>,
+                <p
+                  className="device-card-text"
+                >
+                  Status: 
+                </p>,
+                <p
+                  className="device-card-text"
+                >
+                  Zones: 
+                  2
+                </p>,
+                <button
+                  className="buttons display-zones-button"
+                  onClick={[Function]}
+                  value="d8f8ac47"
+                >
+                  Display Zones
+                </button>,
+              ],
+              "className": "device-card-text-section",
             },
             "ref": null,
-            "rendered": "Gouda",
-            "type": "h3",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Gouda",
+                  "className": "device-card-text",
+                },
+                "ref": null,
+                "rendered": "Gouda",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Model: ",
+                    "GENERATION2_8ZONE",
+                  ],
+                  "className": "device-card-text",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Model: ",
+                  "GENERATION2_8ZONE",
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Status: ",
+                    undefined,
+                  ],
+                  "className": "device-card-text",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Status: ",
+                  undefined,
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Zones: ",
+                    2,
+                  ],
+                  "className": "device-card-text",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Zones: ",
+                  2,
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Display Zones",
+                  "className": "buttons display-zones-button",
+                  "onClick": [Function],
+                  "value": "d8f8ac47",
+                },
+                "ref": null,
+                "rendered": "Display Zones",
+                "type": "button",
+              },
+            ],
+            "type": "section",
           },
           Object {
             "instance": null,
@@ -155,152 +306,77 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "Model: ",
-                "GENERATION2_8ZONE",
+                <label
+                  className="duration-label"
+                  htmlFor="duration"
+                >
+                  Runtime Duration:
+                </label>,
+                <input
+                  className="duration-input"
+                  id="duration"
+                  name="duration"
+                  onChange={[Function]}
+                  placeholder="Desired Runtime"
+                  type="number"
+                  value={0}
+                />,
+                <button
+                  className="activate-buttons activate-all-button buttons"
+                  onClick={[Function]}
+                >
+                  Start All Zones
+                </button>,
               ],
-              "className": "device-card-text",
+              "className": "device-card-input-section",
             },
             "ref": null,
             "rendered": Array [
-              "Model: ",
-              "GENERATION2_8ZONE",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Runtime Duration:",
+                  "className": "duration-label",
+                  "htmlFor": "duration",
+                },
+                "ref": null,
+                "rendered": "Runtime Duration:",
+                "type": "label",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "duration-input",
+                  "id": "duration",
+                  "name": "duration",
+                  "onChange": [Function],
+                  "placeholder": "Desired Runtime",
+                  "type": "number",
+                  "value": 0,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Start All Zones",
+                  "className": "activate-buttons activate-all-button buttons",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Start All Zones",
+                "type": "button",
+              },
             ],
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                "Status: ",
-                undefined,
-              ],
-              "className": "device-card-text",
-            },
-            "ref": null,
-            "rendered": Array [
-              "Status: ",
-              undefined,
-            ],
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                "Zones: ",
-                2,
-              ],
-              "className": "device-card-text",
-            },
-            "ref": null,
-            "rendered": Array [
-              "Zones: ",
-              2,
-            ],
-            "type": "p",
-          },
-        ],
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <button
-              className="activate-buttons activate-all-button"
-              onClick={[Function]}
-            >
-              Start All Zones
-            </button>,
-            <label
-              className="duration-label"
-              htmlFor="duration"
-            >
-              Runtime Duration:
-            </label>,
-            <input
-              className="duration-input"
-              id="duration"
-              name="duration"
-              onChange={[Function]}
-              placeholder="Desired Runtime"
-              type="number"
-              value={0}
-            />,
-            <button
-              className="activate-buttons display-zones-button"
-              onClick={[Function]}
-              value="d8f8ac47"
-            >
-              Display Zones
-            </button>,
-          ],
-          "className": "device-card-input-section",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Start All Zones",
-              "className": "activate-buttons activate-all-button",
-              "onClick": [Function],
-            },
-            "ref": null,
-            "rendered": "Start All Zones",
-            "type": "button",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Runtime Duration:",
-              "className": "duration-label",
-              "htmlFor": "duration",
-            },
-            "ref": null,
-            "rendered": "Runtime Duration:",
-            "type": "label",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "duration-input",
-              "id": "duration",
-              "name": "duration",
-              "onChange": [Function],
-              "placeholder": "Desired Runtime",
-              "type": "number",
-              "value": 0,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Display Zones",
-              "className": "activate-buttons display-zones-button",
-              "onClick": [Function],
-              "value": "d8f8ac47",
-            },
-            "ref": null,
-            "rendered": "Display Zones",
-            "type": "button",
+            "type": "section",
           },
         ],
         "type": "div",
@@ -339,62 +415,66 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="device-card-text-section"
+            className="device-card"
           >
-            <h3
-              className="device-card-text"
+            <section
+              className="device-card-text-section"
             >
-              Gouda
-            </h3>
-            <p
-              className="device-card-text"
+              <h3
+                className="device-card-text"
+              >
+                Gouda
+              </h3>
+              <p
+                className="device-card-text"
+              >
+                Model: 
+                GENERATION2_8ZONE
+              </p>
+              <p
+                className="device-card-text"
+              >
+                Status: 
+              </p>
+              <p
+                className="device-card-text"
+              >
+                Zones: 
+                2
+              </p>
+              <button
+                className="buttons display-zones-button"
+                onClick={[Function]}
+                value="d8f8ac47"
+              >
+                Display Zones
+              </button>
+            </section>
+            <section
+              className="device-card-input-section"
             >
-              Model: 
-              GENERATION2_8ZONE
-            </p>
-            <p
-              className="device-card-text"
-            >
-              Status: 
-            </p>
-            <p
-              className="device-card-text"
-            >
-              Zones: 
-              2
-            </p>
-          </div>,
-          <div
-            className="device-card-input-section"
-          >
-            <button
-              className="activate-buttons activate-all-button"
-              onClick={[Function]}
-            >
-              Start All Zones
-            </button>
-            <label
-              className="duration-label"
-              htmlFor="duration"
-            >
-              Runtime Duration:
-            </label>
-            <input
-              className="duration-input"
-              id="duration"
-              name="duration"
-              onChange={[Function]}
-              placeholder="Desired Runtime"
-              type="number"
-              value={0}
-            />
-            <button
-              className="activate-buttons display-zones-button"
-              onClick={[Function]}
-              value="d8f8ac47"
-            >
-              Display Zones
-            </button>
+              <label
+                className="duration-label"
+                htmlFor="duration"
+              >
+                Runtime Duration:
+              </label>
+              <input
+                className="duration-input"
+                id="duration"
+                name="duration"
+                onChange={[Function]}
+                placeholder="Desired Runtime"
+                type="number"
+                value={0}
+              />
+              <button
+                className="activate-buttons activate-all-button buttons"
+                onClick={[Function]}
+              >
+                Start All Zones
+              </button>
+            </section>
           </div>,
           <div>
             <ZoneContainer
@@ -402,7 +482,7 @@ ShallowWrapper {
             />
           </div>,
         ],
-        "className": "device-card",
+        "className": "device-card-container",
       },
       "ref": null,
       "rendered": Array [
@@ -412,30 +492,66 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h3
-                className="device-card-text"
+              <section
+                className="device-card-text-section"
               >
-                Gouda
-              </h3>,
-              <p
-                className="device-card-text"
+                <h3
+                  className="device-card-text"
+                >
+                  Gouda
+                </h3>
+                <p
+                  className="device-card-text"
+                >
+                  Model: 
+                  GENERATION2_8ZONE
+                </p>
+                <p
+                  className="device-card-text"
+                >
+                  Status: 
+                </p>
+                <p
+                  className="device-card-text"
+                >
+                  Zones: 
+                  2
+                </p>
+                <button
+                  className="buttons display-zones-button"
+                  onClick={[Function]}
+                  value="d8f8ac47"
+                >
+                  Display Zones
+                </button>
+              </section>,
+              <section
+                className="device-card-input-section"
               >
-                Model: 
-                GENERATION2_8ZONE
-              </p>,
-              <p
-                className="device-card-text"
-              >
-                Status: 
-              </p>,
-              <p
-                className="device-card-text"
-              >
-                Zones: 
-                2
-              </p>,
+                <label
+                  className="duration-label"
+                  htmlFor="duration"
+                >
+                  Runtime Duration:
+                </label>
+                <input
+                  className="duration-input"
+                  id="duration"
+                  name="duration"
+                  onChange={[Function]}
+                  placeholder="Desired Runtime"
+                  type="number"
+                  value={0}
+                />
+                <button
+                  className="activate-buttons activate-all-button buttons"
+                  onClick={[Function]}
+                >
+                  Start All Zones
+                </button>
+              </section>,
             ],
-            "className": "device-card-text-section",
+            "className": "device-card",
           },
           "ref": null,
           "rendered": Array [
@@ -444,12 +560,123 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Gouda",
-                "className": "device-card-text",
+                "children": Array [
+                  <h3
+                    className="device-card-text"
+                  >
+                    Gouda
+                  </h3>,
+                  <p
+                    className="device-card-text"
+                  >
+                    Model: 
+                    GENERATION2_8ZONE
+                  </p>,
+                  <p
+                    className="device-card-text"
+                  >
+                    Status: 
+                  </p>,
+                  <p
+                    className="device-card-text"
+                  >
+                    Zones: 
+                    2
+                  </p>,
+                  <button
+                    className="buttons display-zones-button"
+                    onClick={[Function]}
+                    value="d8f8ac47"
+                  >
+                    Display Zones
+                  </button>,
+                ],
+                "className": "device-card-text-section",
               },
               "ref": null,
-              "rendered": "Gouda",
-              "type": "h3",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Gouda",
+                    "className": "device-card-text",
+                  },
+                  "ref": null,
+                  "rendered": "Gouda",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Model: ",
+                      "GENERATION2_8ZONE",
+                    ],
+                    "className": "device-card-text",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Model: ",
+                    "GENERATION2_8ZONE",
+                  ],
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Status: ",
+                      undefined,
+                    ],
+                    "className": "device-card-text",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Status: ",
+                    undefined,
+                  ],
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Zones: ",
+                      2,
+                    ],
+                    "className": "device-card-text",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Zones: ",
+                    2,
+                  ],
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Display Zones",
+                    "className": "buttons display-zones-button",
+                    "onClick": [Function],
+                    "value": "d8f8ac47",
+                  },
+                  "ref": null,
+                  "rendered": "Display Zones",
+                  "type": "button",
+                },
+              ],
+              "type": "section",
             },
             Object {
               "instance": null,
@@ -457,152 +684,77 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "Model: ",
-                  "GENERATION2_8ZONE",
+                  <label
+                    className="duration-label"
+                    htmlFor="duration"
+                  >
+                    Runtime Duration:
+                  </label>,
+                  <input
+                    className="duration-input"
+                    id="duration"
+                    name="duration"
+                    onChange={[Function]}
+                    placeholder="Desired Runtime"
+                    type="number"
+                    value={0}
+                  />,
+                  <button
+                    className="activate-buttons activate-all-button buttons"
+                    onClick={[Function]}
+                  >
+                    Start All Zones
+                  </button>,
                 ],
-                "className": "device-card-text",
+                "className": "device-card-input-section",
               },
               "ref": null,
               "rendered": Array [
-                "Model: ",
-                "GENERATION2_8ZONE",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Runtime Duration:",
+                    "className": "duration-label",
+                    "htmlFor": "duration",
+                  },
+                  "ref": null,
+                  "rendered": "Runtime Duration:",
+                  "type": "label",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "duration-input",
+                    "id": "duration",
+                    "name": "duration",
+                    "onChange": [Function],
+                    "placeholder": "Desired Runtime",
+                    "type": "number",
+                    "value": 0,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Start All Zones",
+                    "className": "activate-buttons activate-all-button buttons",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Start All Zones",
+                  "type": "button",
+                },
               ],
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  "Status: ",
-                  undefined,
-                ],
-                "className": "device-card-text",
-              },
-              "ref": null,
-              "rendered": Array [
-                "Status: ",
-                undefined,
-              ],
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  "Zones: ",
-                  2,
-                ],
-                "className": "device-card-text",
-              },
-              "ref": null,
-              "rendered": Array [
-                "Zones: ",
-                2,
-              ],
-              "type": "p",
-            },
-          ],
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <button
-                className="activate-buttons activate-all-button"
-                onClick={[Function]}
-              >
-                Start All Zones
-              </button>,
-              <label
-                className="duration-label"
-                htmlFor="duration"
-              >
-                Runtime Duration:
-              </label>,
-              <input
-                className="duration-input"
-                id="duration"
-                name="duration"
-                onChange={[Function]}
-                placeholder="Desired Runtime"
-                type="number"
-                value={0}
-              />,
-              <button
-                className="activate-buttons display-zones-button"
-                onClick={[Function]}
-                value="d8f8ac47"
-              >
-                Display Zones
-              </button>,
-            ],
-            "className": "device-card-input-section",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Start All Zones",
-                "className": "activate-buttons activate-all-button",
-                "onClick": [Function],
-              },
-              "ref": null,
-              "rendered": "Start All Zones",
-              "type": "button",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Runtime Duration:",
-                "className": "duration-label",
-                "htmlFor": "duration",
-              },
-              "ref": null,
-              "rendered": "Runtime Duration:",
-              "type": "label",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "className": "duration-input",
-                "id": "duration",
-                "name": "duration",
-                "onChange": [Function],
-                "placeholder": "Desired Runtime",
-                "type": "number",
-                "value": 0,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Display Zones",
-                "className": "activate-buttons display-zones-button",
-                "onClick": [Function],
-                "value": "d8f8ac47",
-              },
-              "ref": null,
-              "rendered": "Display Zones",
-              "type": "button",
+              "type": "section",
             },
           ],
           "type": "div",

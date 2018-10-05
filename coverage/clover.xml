@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1538681749070" clover="3.2.0">
-  <project timestamp="1538681749070" name="All files">
-    <metrics statements="78" coveredstatements="76" conditionals="8" coveredconditionals="8" methods="38" coveredmethods="36" elements="124" coveredelements="120" complexity="0" loc="78" ncloc="78" packages="6" files="6" classes="6">
+<coverage generated="1538702344293" clover="3.2.0">
+  <project timestamp="1538702344293" name="All files">
+    <metrics statements="76" coveredstatements="74" conditionals="8" coveredconditionals="8" methods="38" coveredmethods="36" elements="122" coveredelements="118" complexity="0" loc="76" ncloc="76" packages="6" files="6" classes="6">
       <package name="Components.App">
         <metrics statements="21" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="12"/>
         <file name="App.js" path="/Users/torydberg/Projects/rachio-challenge/src/Components/App/App.js">
@@ -30,36 +30,35 @@
         </file>
       </package>
       <package name="Components.Device">
-        <metrics statements="27" coveredstatements="26" conditionals="4" coveredconditionals="4" methods="14" coveredmethods="13"/>
+        <metrics statements="26" coveredstatements="25" conditionals="4" coveredconditionals="4" methods="14" coveredmethods="13"/>
         <file name="Device.js" path="/Users/torydberg/Projects/rachio-challenge/src/Components/Device/Device.js">
-          <metrics statements="27" coveredstatements="26" conditionals="4" coveredconditionals="4" methods="14" coveredmethods="13"/>
-          <line num="8" count="9" type="stmt"/>
-          <line num="10" count="9" type="stmt"/>
+          <metrics statements="26" coveredstatements="25" conditionals="4" coveredconditionals="4" methods="14" coveredmethods="13"/>
+          <line num="7" count="9" type="stmt"/>
+          <line num="9" count="9" type="stmt"/>
+          <line num="14" count="9" type="stmt"/>
           <line num="15" count="9" type="stmt"/>
           <line num="16" count="9" type="stmt"/>
           <line num="17" count="9" type="stmt"/>
           <line num="18" count="9" type="stmt"/>
-          <line num="19" count="9" type="stmt"/>
+          <line num="24" count="2" type="stmt"/>
           <line num="25" count="2" type="stmt"/>
-          <line num="26" count="2" type="stmt"/>
-          <line num="29" count="2" type="stmt"/>
-          <line num="33" count="2" type="cond" truecount="2" falsecount="0"/>
-          <line num="34" count="1" type="stmt"/>
-          <line num="39" count="2" type="stmt"/>
-          <line num="40" count="1" type="stmt"/>
+          <line num="28" count="2" type="stmt"/>
+          <line num="32" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="33" count="1" type="stmt"/>
+          <line num="38" count="2" type="stmt"/>
+          <line num="39" count="1" type="stmt"/>
+          <line num="46" count="1" type="stmt"/>
           <line num="47" count="1" type="stmt"/>
-          <line num="48" count="1" type="stmt"/>
-          <line num="54" count="2" type="stmt"/>
+          <line num="53" count="2" type="stmt"/>
+          <line num="57" count="1" type="stmt"/>
           <line num="58" count="1" type="stmt"/>
-          <line num="59" count="1" type="stmt"/>
-          <line num="70" count="1" type="stmt"/>
-          <line num="73" count="0" type="stmt"/>
+          <line num="69" count="1" type="stmt"/>
+          <line num="72" count="0" type="stmt"/>
+          <line num="76" count="21" type="stmt"/>
           <line num="77" count="21" type="stmt"/>
-          <line num="78" count="21" type="stmt"/>
-          <line num="89" count="1" type="stmt"/>
-          <line num="104" count="1" type="stmt"/>
-          <line num="107" count="1" type="stmt"/>
-          <line num="123" count="3" type="stmt"/>
+          <line num="86" count="1" type="stmt"/>
+          <line num="105" count="1" type="stmt"/>
+          <line num="109" count="1" type="stmt"/>
         </file>
       </package>
       <package name="Components.DeviceContainer">
@@ -92,21 +91,20 @@
           <line num="41" count="0" type="stmt"/>
           <line num="45" count="11" type="stmt"/>
           <line num="46" count="11" type="stmt"/>
-          <line num="59" count="1" type="stmt"/>
-          <line num="62" count="1" type="stmt"/>
-          <line num="73" count="5" type="stmt"/>
+          <line num="66" count="1" type="stmt"/>
+          <line num="69" count="1" type="stmt"/>
+          <line num="80" count="5" type="stmt"/>
         </file>
       </package>
       <package name="Components.ZoneContainer">
-        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <file name="ZoneContainer.js" path="/Users/torydberg/Projects/rachio-challenge/src/Components/ZoneContainer/ZoneContainer.js">
-          <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-          <line num="5" count="4" type="stmt"/>
-          <line num="7" count="2" type="cond" truecount="2" falsecount="0"/>
-          <line num="8" count="1" type="stmt"/>
-          <line num="9" count="2" type="stmt"/>
-          <line num="12" count="2" type="stmt"/>
-          <line num="21" count="4" type="stmt"/>
+          <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+          <line num="4" count="4" type="stmt"/>
+          <line num="6" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
         </file>
       </package>
       <package name="helpers">

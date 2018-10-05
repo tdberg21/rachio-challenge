@@ -50,7 +50,7 @@ describe('Zone tests', () => {
     expect(window.fetch).toHaveBeenCalled();
   });
 
-  it('should update state with a message of success when handleActivateZone is called', () => {
+  it('should update state with a message of success when handleActivateZone is called and there is no error', () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       json: () => Promise.resolve({})
     }));
@@ -58,7 +58,25 @@ describe('Zone tests', () => {
     wrapper.instance().handleActivateZone(mockEvent);
     const results = wrapper.state('message');
     
-    expect(results).toEqual('');
+    expect(results).toEqual('Success');
+
+  });
+
+  it('should update state with a message of success when handleActivateZone is called and there is an error', () => {
+    const mockEvent = { target: { value: 2 } };
+    window.fetch = jest.fn().mockImplementationOnce(() => Promise.reject(
+      new Error('failed')
+    ));
+    Promise.resolve(wrapper.instance().handleActivateZone(mockEvent))
+      .then(() => {
+        wrapper.update();
+      })
+      .then(() => {
+        wrapper.update();
+      })
+      .then(() => {
+        expect(wrapper.state('message')).toEqual('');
+      });
   });
 
   it('should invoke handleActivateZone when activate zone button is clicked', () => {

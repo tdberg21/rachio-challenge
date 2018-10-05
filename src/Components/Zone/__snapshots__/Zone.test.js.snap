@@ -30,42 +30,51 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h4>
-          Zone 2
-        </h4>,
-        <img
-          alt="Zone 2"
-          className="zone-image"
-          src="google.com"
-        />,
-        <p>
-          Max Runtime: 
-          10800
-           
-        </p>,
-        <label
-          htmlFor="duration"
+        <section
+          className="zone-info-section zone-sections"
         >
-          Runtime Duration:
-        </label>,
-        <input
-          className="duration-input"
-          id="duration"
-          name="duration"
-          onChange={[Function]}
-          placeholder="Desired Runtime"
-          type="number"
-          value={0}
-        />,
-        <button
-          className="activate-zone-button"
-          onClick={[Function]}
-          value="bf329221"
+          <h4>
+            Zone 2
+          </h4>
+          <p>
+            Max Runtime: 
+            10800
+             
+          </p>
+          <img
+            alt="Zone 2"
+            className="zone-image"
+            src="google.com"
+          />
+        </section>,
+        <section
+          className="zone-form-section zone-sections"
         >
-          Activate Zone
-        </button>,
-        "",
+          <label
+            className="duration-label"
+            htmlFor="duration"
+          >
+            Runtime Duration:
+          </label>
+          <input
+            className="duration-input"
+            id="duration"
+            name="duration"
+            onChange={[Function]}
+            placeholder="Desired Runtime"
+            type="number"
+            value={0}
+          />
+          <button
+            className="activate-zone-button activate-buttons buttons"
+            onClick={[Function]}
+            value="bf329221"
+          >
+            Activate Zone
+          </button>
+        </section>,
       ],
+      "className": "zone-component",
     },
     "ref": null,
     "rendered": Array [
@@ -74,24 +83,70 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Zone 2",
+          "children": Array [
+            <h4>
+              Zone 2
+            </h4>,
+            <p>
+              Max Runtime: 
+              10800
+               
+            </p>,
+            <img
+              alt="Zone 2"
+              className="zone-image"
+              src="google.com"
+            />,
+          ],
+          "className": "zone-info-section zone-sections",
         },
         "ref": null,
-        "rendered": "Zone 2",
-        "type": "h4",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "alt": "Zone 2",
-          "className": "zone-image",
-          "src": "google.com",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "img",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Zone 2",
+            },
+            "ref": null,
+            "rendered": "Zone 2",
+            "type": "h4",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Max Runtime: ",
+                10800,
+                " ",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Max Runtime: ",
+              10800,
+              " ",
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "Zone 2",
+              "className": "zone-image",
+              "src": "google.com",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+        ],
+        "type": "section",
       },
       Object {
         "instance": null,
@@ -99,63 +154,80 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "Max Runtime: ",
-            10800,
-            " ",
+            <label
+              className="duration-label"
+              htmlFor="duration"
+            >
+              Runtime Duration:
+            </label>,
+            <input
+              className="duration-input"
+              id="duration"
+              name="duration"
+              onChange={[Function]}
+              placeholder="Desired Runtime"
+              type="number"
+              value={0}
+            />,
+            <button
+              className="activate-zone-button activate-buttons buttons"
+              onClick={[Function]}
+              value="bf329221"
+            >
+              Activate Zone
+            </button>,
           ],
+          "className": "zone-form-section zone-sections",
         },
         "ref": null,
         "rendered": Array [
-          "Max Runtime: ",
-          10800,
-          " ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Runtime Duration:",
+              "className": "duration-label",
+              "htmlFor": "duration",
+            },
+            "ref": null,
+            "rendered": "Runtime Duration:",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "duration-input",
+              "id": "duration",
+              "name": "duration",
+              "onChange": [Function],
+              "placeholder": "Desired Runtime",
+              "type": "number",
+              "value": 0,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Activate Zone",
+              "className": "activate-zone-button activate-buttons buttons",
+              "onClick": [Function],
+              "value": "bf329221",
+            },
+            "ref": null,
+            "rendered": "Activate Zone",
+            "type": "button",
+          },
         ],
-        "type": "p",
+        "type": "section",
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Runtime Duration:",
-          "htmlFor": "duration",
-        },
-        "ref": null,
-        "rendered": "Runtime Duration:",
-        "type": "label",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "duration-input",
-          "id": "duration",
-          "name": "duration",
-          "onChange": [Function],
-          "placeholder": "Desired Runtime",
-          "type": "number",
-          "value": 0,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Activate Zone",
-          "className": "activate-zone-button",
-          "onClick": [Function],
-          "value": "bf329221",
-        },
-        "ref": null,
-        "rendered": "Activate Zone",
-        "type": "button",
-      },
-      "",
     ],
     "type": "div",
   },
@@ -166,42 +238,51 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h4>
-            Zone 2
-          </h4>,
-          <img
-            alt="Zone 2"
-            className="zone-image"
-            src="google.com"
-          />,
-          <p>
-            Max Runtime: 
-            10800
-             
-          </p>,
-          <label
-            htmlFor="duration"
+          <section
+            className="zone-info-section zone-sections"
           >
-            Runtime Duration:
-          </label>,
-          <input
-            className="duration-input"
-            id="duration"
-            name="duration"
-            onChange={[Function]}
-            placeholder="Desired Runtime"
-            type="number"
-            value={0}
-          />,
-          <button
-            className="activate-zone-button"
-            onClick={[Function]}
-            value="bf329221"
+            <h4>
+              Zone 2
+            </h4>
+            <p>
+              Max Runtime: 
+              10800
+               
+            </p>
+            <img
+              alt="Zone 2"
+              className="zone-image"
+              src="google.com"
+            />
+          </section>,
+          <section
+            className="zone-form-section zone-sections"
           >
-            Activate Zone
-          </button>,
-          "",
+            <label
+              className="duration-label"
+              htmlFor="duration"
+            >
+              Runtime Duration:
+            </label>
+            <input
+              className="duration-input"
+              id="duration"
+              name="duration"
+              onChange={[Function]}
+              placeholder="Desired Runtime"
+              type="number"
+              value={0}
+            />
+            <button
+              className="activate-zone-button activate-buttons buttons"
+              onClick={[Function]}
+              value="bf329221"
+            >
+              Activate Zone
+            </button>
+          </section>,
         ],
+        "className": "zone-component",
       },
       "ref": null,
       "rendered": Array [
@@ -210,24 +291,70 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Zone 2",
+            "children": Array [
+              <h4>
+                Zone 2
+              </h4>,
+              <p>
+                Max Runtime: 
+                10800
+                 
+              </p>,
+              <img
+                alt="Zone 2"
+                className="zone-image"
+                src="google.com"
+              />,
+            ],
+            "className": "zone-info-section zone-sections",
           },
           "ref": null,
-          "rendered": "Zone 2",
-          "type": "h4",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "alt": "Zone 2",
-            "className": "zone-image",
-            "src": "google.com",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "img",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Zone 2",
+              },
+              "ref": null,
+              "rendered": "Zone 2",
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Max Runtime: ",
+                  10800,
+                  " ",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Max Runtime: ",
+                10800,
+                " ",
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "Zone 2",
+                "className": "zone-image",
+                "src": "google.com",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+          ],
+          "type": "section",
         },
         Object {
           "instance": null,
@@ -235,63 +362,80 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "Max Runtime: ",
-              10800,
-              " ",
+              <label
+                className="duration-label"
+                htmlFor="duration"
+              >
+                Runtime Duration:
+              </label>,
+              <input
+                className="duration-input"
+                id="duration"
+                name="duration"
+                onChange={[Function]}
+                placeholder="Desired Runtime"
+                type="number"
+                value={0}
+              />,
+              <button
+                className="activate-zone-button activate-buttons buttons"
+                onClick={[Function]}
+                value="bf329221"
+              >
+                Activate Zone
+              </button>,
             ],
+            "className": "zone-form-section zone-sections",
           },
           "ref": null,
           "rendered": Array [
-            "Max Runtime: ",
-            10800,
-            " ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Runtime Duration:",
+                "className": "duration-label",
+                "htmlFor": "duration",
+              },
+              "ref": null,
+              "rendered": "Runtime Duration:",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "duration-input",
+                "id": "duration",
+                "name": "duration",
+                "onChange": [Function],
+                "placeholder": "Desired Runtime",
+                "type": "number",
+                "value": 0,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Activate Zone",
+                "className": "activate-zone-button activate-buttons buttons",
+                "onClick": [Function],
+                "value": "bf329221",
+              },
+              "ref": null,
+              "rendered": "Activate Zone",
+              "type": "button",
+            },
           ],
-          "type": "p",
+          "type": "section",
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Runtime Duration:",
-            "htmlFor": "duration",
-          },
-          "ref": null,
-          "rendered": "Runtime Duration:",
-          "type": "label",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "duration-input",
-            "id": "duration",
-            "name": "duration",
-            "onChange": [Function],
-            "placeholder": "Desired Runtime",
-            "type": "number",
-            "value": 0,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Activate Zone",
-            "className": "activate-zone-button",
-            "onClick": [Function],
-            "value": "bf329221",
-          },
-          "ref": null,
-          "rendered": "Activate Zone",
-          "type": "button",
-        },
-        "",
       ],
       "type": "div",
     },

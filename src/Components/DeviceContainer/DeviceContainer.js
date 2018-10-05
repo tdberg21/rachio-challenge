@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const DeviceContainer = ({ devices }) => {
   if (!devices) {
     return (
-      <div className='device-container loading-container'>
+      <div className='device-container-component loading-container'>
         <p className='loading-text'>Loading...</p>
       </div>
     );
@@ -15,7 +15,7 @@ const DeviceContainer = ({ devices }) => {
       return <Device device={device} key={index}/>;
     });
     return (
-      <div className='device-container'>
+      <div className='device-container-component'>
         {devicesToDisplay}
       </div>
     );
