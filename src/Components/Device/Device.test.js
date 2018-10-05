@@ -86,14 +86,37 @@ describe('Device tests', () => {
   });
 
   it('should add a status code to the status array in state when activateZone is invoked', () => {
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-      status: 204
-    }));
     const initialState = wrapper.state('status').length;
-    wrapper.instance().activateZone(3);
-    const results = wrapper.state();
-
+    
     expect(initialState).toEqual(0);
+
+    window.fetch = jest.fn().mockImplementationOnce(() => Promise.resolve({ status: 204 }));
+    Promise.resolve(wrapper.instance().activateZone(7))
+      .then(() => {
+        wrapper.update();
+      })
+      .then(() => {
+        wrapper.update();
+      })
+      .then(() => {
+        expect(wrapper.state('status').length).toEqual(1);
+      });
+  });
+
+  it('should add an error message to state when activateZone is invoked and there is an error', () => {
+    window.fetch = jest.fn().mockImplementationOnce(() => Promise.reject(
+      new Error('failed')
+    ));
+    Promise.resolve(wrapper.instance().activateZone(7))
+      .then(() => {
+        wrapper.update();
+      })
+      .then(() => {
+        wrapper.update();
+      })
+      .then(() => {
+        expect(wrapper.state('message')).toEqual('Error!');
+      });
   });
 
   it('should invoke activateAllZones on click of the Start All Zones button', () => {

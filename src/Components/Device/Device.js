@@ -69,7 +69,7 @@ export default class Device extends Component {
       .then((response) => this.setState({
         status: [...this.state.status, response.status]
       }))
-      .catch(error => this.setState({ message: `Error: ${error}` }));
+      .catch(error => this.setState({ message: `Error!` }));
   }
 
   render() {
